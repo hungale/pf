@@ -1,89 +1,89 @@
-.page {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
-  max-width: 50rem;
-  font-family: Helvetica, sans-serif;
-  margin: auto;
 }
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  /* font-family: Helvetica, sans-serif; */
+}
+
 
 .grid {
   display: grid;
   /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1rem;
-  background-color: #5995DA;
-  border: solid black;
+
+  /* sticky header */
   position: sticky;
   top: 0px;
+  
+  /* debug */
+  background-color: #5995DA;
+  /* border: solid black; */
 }
 
 .item {
-  background-color: #BCE0FE;
-  /* justify-self: end; */
-  /* place-self: center; */
   grid-column: 1/6;
+  padding-left: 2em;
+
+  /* debug */
+  /* background-color: #BCE0FE; */
 }
 
 .menu {
-  background-color: #BCE0FE;
-  /* justify-self: center; */
   place-self: end;
   grid-column: 7/13;
-  /* width:100%; */
+
+  /* debug */
+  /* background-color: #BCE0FE; */
 }
 
 #navlist {
   list-style-type: none;
   display: flex;
-  /* padding: 0 0 0 2em; */
+  padding: 0 2em 0 2em;
   justify-content: center;
-  /* align-items: baseline; */
-  border: solid black;
+
+  /* debug */
+  /* border: solid black; */
 }
 #navlist li + li:before { /* display comma separated list */
   content: ", ";
 }
+section {
+  padding: 0 1em;
+  /* margin: 0; */
+  display: flex;
+  flex-direction: column;
+}
+
 #landing {
   color: #fff;
   height: 100vh;
-  background-color: #7296B3;
   font-size: large;
+  
+  /* debug */
+  background-color: #7296B3;
 }
 #about {
   color: black;
   height: 100vh;
+  width: 100%;
+  font-size: large;
+  padding-top: 50px;
+
+
+  /* debug */
   background-color:#CDE5FA;
-  font-size: large;
 }
+
 #contact {
-  color: black;
+  color: white;
   height: 100vh;
-  background-color:#E1FAD9;
+  
   font-size: large;
+  padding-top: 50px;
+
+  /* debug */
+  background-color:#4472A6;
 }
-
-
-/* #navlist li {display: inline;}
-#navlist li:after {content: ', ';}
-#navlist li:last-child:after {content: ""; } */
-
-/* .flex-container{
-  color: #fff;
-  background-color: #5995DA; 
-  padding: 20px 0;
-  display: grid;
-}
-
-#landing {
-  color: #fff;
-  height: 100vh;
-  background-color: #5995DA;
-  font-size: large;
-}
-
-.menu {
-  padding: 20px 0;
-  color: blue;
-  background-color: blue;
-} */
